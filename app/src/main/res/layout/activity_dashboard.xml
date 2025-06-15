@@ -22,27 +22,27 @@
         android:layout_height="wrap_content"
         android:text="Balance: $0.00"
         android:textSize="22sp"
+        android:layout_marginTop="20dp"
         app:layout_constraintTop_toBottomOf="@id/welcomeText"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="20dp"/>
+        app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/monthlySummaryCard"
         android:layout_width="0dp"
-        android:layout_height="120dp"
+        android:layout_height="wrap_content"
         app:cardCornerRadius="12dp"
         app:cardElevation="4dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginHorizontal="4dp"
         app:layout_constraintTop_toBottomOf="@id/balanceText"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="24dp"
-        android:layout_marginHorizontal="4dp">
+        app:layout_constraintEnd_toEndOf="parent">
 
         <LinearLayout
             android:orientation="vertical"
             android:padding="16dp"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content">
 
             <TextView
                 android:text="This Month"
@@ -74,14 +74,15 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/sampleTransaction"
-        android:layout_width="wrap_content"
+        android:id="@+id/recentTransactionsText"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="- Coffee $4.50"
+        android:text="No recent transactions yet"
         android:textSize="16sp"
+        android:layout_marginTop="8dp"
         app:layout_constraintTop_toBottomOf="@id/recentLabel"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="8dp" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <ProgressBar
         android:id="@+id/spendingProgress"
@@ -91,10 +92,10 @@
         android:progress="30"
         android:max="100"
         android:progressTint="#6A4DBA"
-        app:layout_constraintTop_toBottomOf="@id/sampleTransaction"
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toBottomOf="@id/recentTransactionsText"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="24dp" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab_add"
@@ -103,8 +104,8 @@
         android:contentDescription="Add Transaction"
         android:src="@android:drawable/ic_input_add"
         app:tint="@android:color/black"
+        android:layout_margin="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_margin="20dp" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
